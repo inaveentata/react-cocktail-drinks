@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@300;400;500&display=swap");
+
+/* 
+font-family: 'Dancing Script', cursive; //cocktail list font
+font-family: 'Open Sans', sans-serif; // main-font-family
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primaryFont: "Open Sans", sans-serif;
+  --secondaryFont: "Dancing Script", cursive;
+  --mainBackground: #e2e2e2;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --BorderRadius: 0.25rem;
+  --Width: 85vw;
+  --maxWidth: 1170px;
+  --Transition: all 0.3s linear;
+  --letterSpacing: 3px;
+}
+
+
+/* Global styles */
+body {
+  font-family: var(--primaryFont);
+  color: var(--mainBlack);
+  background: var(--mainBackground);
+  line-height: 1.4;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 1.25rem;
+  letter-spacing: var(--letterSpacing);
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: var(--mainBlack);
+}
+img {
+  width: 100%;
+  display: block;
+}
+
+
