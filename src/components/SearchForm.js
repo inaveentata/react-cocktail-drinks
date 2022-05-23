@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const SearchForm = ({ searchTerm, setSearchTerm }) => {
   const handleSubmit = (e) => {
@@ -7,7 +6,7 @@ const SearchForm = ({ searchTerm, setSearchTerm }) => {
   }
   return (
     <section className="form">
-      <form >
+      <form onSubmit={handleSubmit}>
         <div className="input-group">
           <label htmlFor="searchTerm">Search for your favourite cocktail</label>
           <input

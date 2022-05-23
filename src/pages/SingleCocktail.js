@@ -53,7 +53,7 @@ const SingleCocktail = () => {
       setLoading(false)
     };
     fetchDrink();
-  }, []);
+  }, [id]);
   if (loading) {
     return <h1 className="section-tiitle drink">
       Loading...
