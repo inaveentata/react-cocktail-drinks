@@ -76,7 +76,7 @@ button{
 
 main{
   width: var(--Width);
-  margin: 0 auto;
+  margin: 5rem auto;
 }
 
 .btn{
@@ -110,6 +110,10 @@ header{
   box-shadow: var(--lightShadow);
   display: flex;
   align-items: center;
+  width: 100%;
+  position: fixed;
+  top:0;
+  left: 0;
 }
 
 nav{
@@ -150,14 +154,22 @@ nav{
 }
 
 
-/* Home */
+/* Error */
+
+.error-section{
+  width: var(--Width);
+  max-width: var(--maxWidth);
+  margin: 5rem auto;
+  text-align: center;
+  text-transform: capitalize;
+}
 
 /* About */
 
 .about-section{
   width: var(--Width);
   max-width: 700px;
-  margin: 0 auto;
+  margin: 5rem auto;
   text-align: center;
 
   p{
@@ -263,7 +275,7 @@ box-shadow: var(--darkShadow);
 .drink{
   width: var(--Width);
   max-width: var(--maxWidth);
-  margin: 0 auto;
+  margin: 5rem auto;
   text-align: center;
 }
 
