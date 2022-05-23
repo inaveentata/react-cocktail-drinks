@@ -14,6 +14,7 @@ font-family: 'Open Sans', sans-serif; // main-font-family
 :root {
   --primaryFont: "Open Sans", sans-serif;
   --secondaryFont: "Dancing Script", cursive;
+  --primaryColor:rgb(0, 38, 253);
   --mainBackground: #e2e2e2;
   --mainWhite: #fff;
   --mainBlack: #222;
@@ -60,4 +61,236 @@ img {
   display: block;
 }
 
+/* Reusable component */
+section{
+  padding:2rem 0;
+}
 
+.section-title{
+  text-align: center;
+}
+
+button{
+  border: none;
+}
+
+main{
+  width: var(--Width);
+  margin: 0 auto;
+}
+
+.btn{
+  display: inline-block;
+  padding: 0.6em 1em;
+  border-radius: var(--BorderRadius);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing);
+  color: #fff;
+  font-weight: 600;
+  background-color: var(--primaryColor);
+  cursor: pointer;
+  transition: var(--Transition);
+  border: 1.5px solid var(--primaryColor);
+
+  &:hover{
+    background-color: transparent;
+    color: #000;
+  }
+
+  &:active{
+    transform: scale(0.99);
+  }
+
+}
+
+/* Header and nav */
+
+header{
+  background-color: #fff;
+  box-shadow: var(--lightShadow);
+  display: flex;
+  align-items: center;
+}
+
+nav{
+  width: var(--Width);
+  max-width: var(--maxWidth);
+  height: 4rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h1{
+    margin: 0;
+
+    span{
+      color: var(--primaryColor);
+      border-bottom: 3px solid #000;
+    }
+  }
+
+  ul{
+    display: flex;
+
+    .nav-link {
+      font-size: 1.2rem;
+      font-weight: 500;
+
+      &:hover{
+        color: var(--primaryColor);
+      }
+
+    }
+
+    li+li{
+      margin-left: 20px;
+    }
+  }
+}
+
+
+/* Home */
+
+/* About */
+
+.about-section{
+  width: var(--Width);
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+
+  p{
+    line-height: 1.4;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+/* Search form */
+.form{
+  width: var(--Width);
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+
+  .input-group{
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: var(--BorderRadius);
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: var(--lightShadow);
+label{
+  display: block;
+  color: var(--primaryColor);
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+input{
+  width: 100%;
+  height: 2rem;
+  border: 2px solid #ddd;
+  font-size: 100%;
+  border-radius: var(--BorderRadius);
+  outline: none;
+}
+
+  }
+}
+
+
+/* Cocktail List */
+
+.cocktails-section{
+  width: var(--Width);
+  margin: 0 auto;
+  max-width: var(--maxWidth);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+
+  
+}
+
+
+/* Cocktail */
+.cocktail{
+  font-family: var(--secondaryFont);
+  background-color: #fff;
+  margin-bottom: 2rem;
+  box-shadow: var(--lightShadow);
+  transition: var(--Transition);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border-radius: var(--BorderRadius);
+  overflow: hidden;
+  cursor: pointer;
+
+
+  &:hover{
+box-shadow: var(--darkShadow);
+  }
+}pointer
+
+.cocktail-img{
+  border-top-left-radius: var(--BorderRadius);
+  border-top-right-radius: var(--BorderRadius);
+}
+
+.cocktail-footer{
+  padding: 0.8rem;
+
+  h1{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+
+  h3{
+    margin: 4px 0;
+  }
+
+  p{
+    font-weight: 300;
+  }
+}
+
+
+/* Drink */
+
+.drink{
+  width: var(--Width);
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.drink-container{
+  background-color: #fff;
+  border-radius: var(--BorderRadius);
+  overflow: hidden;
+
+  .drink-info{
+text-align: left;
+padding: 1rem;
+    
+    p{
+      margin: 5px 0;
+      font-weight: 600;
+      text-transform: capitalize;
+      span{
+        font-weight: 500;
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width:800px){
+  .drink-container{
+    display: flex;
+    grid-template-columns: repeat(2fr,3fr);
+  }
+}
